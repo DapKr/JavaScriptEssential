@@ -36,9 +36,13 @@ button.onclick = endTest;
                 wpm = Math.round((typedWords / timeElapsed) * 60);
             }
 
+            //Check length of string
+            var lengthOfText = userTypedText.length;
+
             // Display the results
             var outputDiv = document.getElementById("output");
             outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
+                "<p>Total Length: " + lengthOfText + "</p>" +
                 "<p>Words Typed: " + typedWords + "</p>" +
                 "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
                 "<p>Words Per Minute (WPM): " + wpm + "</p>";
